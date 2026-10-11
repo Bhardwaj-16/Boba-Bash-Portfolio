@@ -1,0 +1,244 @@
+/* =====================================================================
+ * Retro Portfolio Stylesheet
+ * 
+ * Stolen From(Inspo):
+ * - Windows 98 CSS components & bevel borders adapted from 98.css by Jordan Scales:
+ *   https://github.com/jdan/98.css (used in https://mail.hackclub.com/)
+ * - Typography:
+ *   - "Press Start 2P" by CodeMan38 (Google Fonts)
+ *   - "VT323" by Peter Hull (Google Fonts)
+ * ===================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  padding: 20px 10px 40px 10px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  background: #000000;
+}
+
+.retro-nav {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.retro-nav a {
+  background: #c0c0c0;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 5px 14px;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+}
+
+.retro-nav a:hover,
+.retro-nav a.active {
+  background: #000080;
+  color: #ffffff;
+  border-color: #808080 #ffffff #ffffff #808080;
+}
+
+.container {
+  max-width: 580px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.window {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #0a0a0a #0a0a0a #ffffff;
+  box-shadow: 
+    inset 1px 1px #dfdfdf,
+    inset -1px -1px #808080,
+    4px 4px 0px rgba(0, 0, 0, 0.4);
+  padding: 3px;
+}
+
+.title-bar {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #ffffff;
+  padding: 3px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.title-bar-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.title-bar-controls button {
+  width: 16px;
+  height: 14px;
+  line-height: 10px;
+  font-size: 9px;
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #0a0a0a #0a0a0a #ffffff;
+  cursor: pointer;
+  padding: 0;
+}
+
+.window-body {
+  padding: 16px;
+}
+
+.profile-section {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.img-box {
+  flex-shrink: 0;
+  width: 130px;
+  height: 130px;
+  background: #ffffff;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 1px 1px #000000;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bio-text {
+  flex: 1;
+}
+
+.bio-text h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.content-box {
+  background: #ffffff;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  padding: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-item {
+  background: #ffffff;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  padding: 12px;
+}
+
+.project-item h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #000080;
+}
+
+.project-item h3 a {
+  color: #000080;
+  text-decoration: underline;
+}
+
+.project-item h3 a:hover {
+  color: #cc0000;
+}
+
+.project-item p {
+  font-size: 13px;
+  color: #444444;
+  margin-top: 4px;
+}
+
+a {
+  color: #0000cc;
+}
+
+a:hover {
+  color: #cc0000;
+}
+
+.project-item .btn {
+  margin-top: 8px;
+  margin-right: 6px;
+}
+
+.btn {
+  display: inline-block;
+  background: #c0c0c0;
+  color: #000000;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border: 2px solid;
+  border-color: #ffffff #0a0a0a #0a0a0a #ffffff;
+  box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px #808080;
+  cursor: pointer;
+}
+
+.btn:active {
+  border-color: #0a0a0a #ffffff #ffffff #0a0a0a;
+}
+
+@media (max-width: 500px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
